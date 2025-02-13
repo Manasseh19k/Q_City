@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="max-age=604800" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+{% if title %}
+  <title>Q - CITY - {{title}}</title>
+{% else %}
+  <title>Q - CITY</title>
+{% endif %}
+
+<link href="{% static 'images/q-city-main.jpg' %}" rel="shortcut icon" type="image/x-icon">
+
+<!-- jQuery -->
+<script src="{% static 'js/jquery-2.0.0.min.js' %}" type="text/javascript"></script>
+
+<!-- Bootstrap4 files-->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}" type="text/javascript"></script>
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
+
+<!-- Font awesome 5 -->
+<link href="{% static 'fonts/fontawesome/css/all.min.css' %}" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- custom style -->
+<link href="{% static 'css/ui.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+
+<link href="{% static 'css/custom.css' %}" rel="stylesheet" type="text/css"/>
+
+<!-- custom javascript -->
+<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+
+<!-- PAYPAL -->
+<script src="https://www.paypal.com/sdk/js?client-id=ASIX5w0p1AwdATl0ArBcJWEKDir9wtlt36tZHDHk5PQHnXX8AoT8ukFFgOvg8VFR0MAczTmJqdUfqH9S&currency=USD"></script>
+
+<script type="text/javascript">
+/// some script
+
+// jquery ready start
+$(document).ready(function() {
+	// jQuery code
+
+}); 
+// jquery end
+setTimeout(function(){
+    $('#message').fadeOut('slow')
+}, 4000)
+</script>
+<style type="text/css">
+	.rate > input {
+  display: none;
+}
+
+.rate{
+  display: inline-block;
+  border: 0;
+}
+
+.rate > label{
+  float: right;
+}
+
+.rate > label:before{
+  display: inline-block;
+  font-size: 1.1rem;
+  font-family: FontAwesome;
+  content: "\f005";
+  margin: 0;
+  padding: 0.3rem .2rem;
+  cursor: pointer;
+}
+.rate .half:before{
+  content: "\f089";
+  position: absolute;
+  padding-right: 0;
+}
+input:checked ~ label, label:hover ~ label{
+  color: #ffb503;
+}
+input:checked + label:hover, input:checked ~ label:hover, input:checked ~ label:hover ~ label, label:hover ~ input:checked ~ label{
+  color: #cc9000;
+}
+.rating-star i {
+  color: #ffb503;
+}
+</style>
+</head>
+<body>
+	<!-- navbar -->
+	{% include 'includes/navbar.html' %}
+
+	{% block content %}
+
+
+	{% endblock %}
+
+	{% include 'includes/footer.html' %}
+	<!-- footer -->
+</body>
+</html>

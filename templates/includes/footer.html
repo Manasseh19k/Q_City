@@ -1,0 +1,90 @@
+{% load static %}
+
+<!-- ========================= FOOTER ========================= -->
+<style type="text/css">
+	/* start of icons */
+ .fa-facebook:hover{
+   color:   #0000FF;
+ }
+
+.fa-twitter-square:hover{
+  color:  #00BFFF;
+}
+
+.fa-instagram-square:hover{
+  color: #FF00FF;
+}
+
+.fa-youtube:hover{
+  color: red;
+}
+
+.social-icon{
+  color: black;
+}
+ /* end of icons */
+</style>
+<footer class="page-footer container-fluid pt-5" style="background-color: 	#C0C0C0;">
+    <div class="row">
+        <div class="col-12 col-md">
+          <h5>Connect with us</h5>
+            <div class="">
+              <a href="https://www.facebook.com/profile.php?id=100004358822419" class="social-icon"><i class="fab fa-facebook fa-3x"></i> </a>
+              <a href="!#" class="social-icon"><i class="fab fa-twitter-square fa-3x"></i> </a>
+              <a href="!#" class="social-icon"><i class="fab fa-instagram-square fa-3x"></i> </a>
+              <a href="!#" class="social-icon"><i class="fab fa-youtube fa-3x"></i> </a>
+            </div>
+          </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text" href="#">New Products</a></li>
+              <li><a class="text" href="mailto:bienvenujessi@gmail.com?subject=A Become Our Model Request!">Become Our Model</a></li>
+              <li><a class="text" href="mailto:bienvenujessi@gmail.com?subject=A Get Feature On Our Site Request!">Get feature on our site</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text" href="#">+242-064-295-240</a></li>
+              <li><a class="text" href="mailto:bienvenujessi@gmail.com?subject=A Customer Service Request!">bienvenujessi@gmail.com</a></li>
+            </ul>
+          </div>
+         <div class="col-6 col-md">
+          <h5>About Us</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text" href="{% url 'meet_our_team' %}">Our Team</a></li>
+              <li><a class="text" href="#">Locations</a></li>
+              <li><a class="text" href="#">Privacy</a></li>
+              <li><a class="text" href="#">Terms</a></li>
+            </ul>
+          </div>
+        <div class="col-6 col-md">
+        <h5>Preview Our Shop</h5>
+        <div class="container-fluid carousel" id="demo">
+            <div class="" id="videoDiv2">
+                <video autoplay muted loop poster="{% static 'images/banners/carousel_image2.jpg' %}" id="myVideo" class="video2 w-100 h-100" onclick="myFunction()">
+                    <source src="{% static 'images/herovideo.mp4' %}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- Copyright -->
+      <div class="footer-copyright text-center text-white py-3 bg-dark">© Copyright:
+          <a href="#" style="color: gold;">Q-CITY</a>
+        </div>
+        <!-- Copyright -->
+  </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.thumb a').click(function(e){
+      e.preventDefault();
+      $('.mainImage img').attr('src', $(this).attr("href"));
+    })
+  })
+</script>
+<!-- ========================= FOOTER END // ========================= -->
